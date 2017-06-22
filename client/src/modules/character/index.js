@@ -21,27 +21,77 @@ export class Character {
   }
 
   keyboardEvents() {
+    let fired = {
+      up: false,
+      left: false,
+      down: false,
+      right: false,
+    };
+
     let onKeyDown = (event) => {
       switch (event.keyCode) {
         case 87: // w
-          this.moveKey.up = true;
+          if (!fired.up) {
+            fired.up = true;
+            this.moveKey.up = true;
+            console.log('up', this.moveKey.up);
+          }
           break;
         case 65: // a
-          this.moveKey.left = true;
+          if (!fired.left) {
+            fired.left = true;
+            this.moveKey.left = true;
+            console.log('left', this.moveKey.left);
+          }
           break;
         case 83: // s
-          this.moveKey.down = true;
+          if (!fired.down) {
+            fired.down = true;
+            this.moveKey.down = true;
+            console.log('down', this.moveKey.down);
+          }
           break;
         case 68: // d
-          this.moveKey.right = true;
+          if (!fired.right) {
+            fired.right = true;
+            this.moveKey.right = true;
+            console.log('right', this.moveKey.right);
+          }
           break;
       }
     };
 
     let onKeyUp = (event) => {
-      Object.keys(this.moveKey).forEach((key) => {
-        this.moveKey[key] = false;
-      });
+      switch (event.keyCode) {
+        case 87: // w
+          if (fired.up) {
+            fired.up = false;
+            this.moveKey.up = false;
+            console.log('up', this.moveKey.up);
+          }
+          break;
+        case 65: // a
+          if (fired.left) {
+            fired.left = false;
+            this.moveKey.left = false;
+            console.log('left', this.moveKey.left);
+          }
+          break;
+        case 83: // s
+          if (fired.down) {
+            fired.down = false;
+            this.moveKey.down = false;
+            console.log('down', this.moveKey.down);
+          }
+          break;
+        case 68: // d
+          if (fired.right) {
+            fired.right = false;
+            this.moveKey.right = false;
+            console.log('right', this.moveKey.right);
+          }
+          break;
+      }
     };
 
     window.addEventListener('keydown', onKeyDown);
