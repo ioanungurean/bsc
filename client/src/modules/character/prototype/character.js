@@ -14,7 +14,7 @@ export class CharacterPrototype {
   generate() {
     return this.load().then((resources) => {
       let boxCharacter = new Mesh(
-        new BoxBufferGeometry(20, 20, 20),
+        new BoxBufferGeometry(10, 20, 10),
         new MeshBasicMaterial({ color: 0xfff222 })
       );
       boxCharacter.name = 'box';
