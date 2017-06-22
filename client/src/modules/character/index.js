@@ -7,10 +7,10 @@ export class Character {
     this.object.position.y = 10;
 
     this.moveKey = {
-      left: false,
-      right: false,
       up: false,
-      down: false
+      left: false,
+      down: false,
+      right: false
     };
     this.collisionList = [];
 
@@ -25,7 +25,7 @@ export class Character {
       up: false,
       left: false,
       down: false,
-      right: false,
+      right: false
     };
 
     let onKeyDown = (event) => {
