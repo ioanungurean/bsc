@@ -1,0 +1,39 @@
+{
+  "name": "cube-maze",
+  "version": "0.0.1",
+  "description": "A 3D browser game",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm prune",
+    "prebuild:dev": "rimraf public",
+    "build:dev": "webpack --config devtools/webpack.config",
+    "postbuild:dev": "webpack-dev-server --config devtools/webpack.config",
+    "prebuild:prod": "rimraf public",
+    "build:prod": "webpack --config devtools/webpack.config --env.environment=prod",
+    "postbuild:prod": "node server/app.js"
+  },
+  "author": "Ioan Ungurean",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.85.2",
+    "three-orbitcontrols": "^1.2.0",
+    "xbem": "0.0.6"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "eslint": "^4.0.0",
+    "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.3",
+    "resolve-url-loader": "^2.0.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-merge": "^4.1.0"
+  }
+}
