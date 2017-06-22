@@ -134,32 +134,50 @@ export class Character {
     });
   }
 
+  checkMoveDiagonally() {
+    return Object.values(this.moveKey).filter(
+      (direction) => { return direction === true;}
+    ).length === 2 ? true : false;
+  }
+
+  getMoveSpeed() {
+    let moveSpeed = 1.5;
+
+    if (this.checkMoveDiagonally()) {
+      return moveSpeed * 1 / Math.sqrt(2);
+    }
+
+    return moveSpeed;
+  }
+
   move(backPeddle) {
+    let moveSpeed = this.getMoveSpeed();
+
     if (backPeddle) {
       if (this.moveKey.up) {
-        this.object.position.x += 1;
+        this.object.position.x += moveSpeed;
       }
       if (this.moveKey.down) {
-        this.object.position.x -= 1;
+        this.object.position.x -= moveSpeed;
       }
       if (this.moveKey.left) {
-        this.object.position.z -= 1;
+        this.object.position.z -= moveSpeed;
       }
       if (this.moveKey.right) {
-        this.object.position.z += 1;
+        this.object.position.z += moveSpeed;
       }
     } else {
       if (this.moveKey.up) {
-        this.object.position.x -= 1;
+        this.object.position.x -= moveSpeed;
       }
       if (this.moveKey.down) {
-        this.object.position.x += 1;
+        this.object.position.x += moveSpeed;
       }
       if (this.moveKey.left) {
-        this.object.position.z += 1;
+        this.object.position.z += moveSpeed;
       }
       if (this.moveKey.right) {
-        this.object.position.z -= 1;
+        this.object.position.z -= moveSpeed;
       }
     }
     this.checkCollision();
