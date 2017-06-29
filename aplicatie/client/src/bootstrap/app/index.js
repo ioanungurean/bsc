@@ -20,7 +20,7 @@ export class App {
    *
    */
   run() {
-    let controls = new OrbitControls(this.camera, this.renderer.domElement); // TODO: move elsewhere
+    let controls = new OrbitControls(this.camera, this.renderer.domElement);
     controls.maxPolarAngle = Math.PI * 0.5;
     controls.minDistance = 5;
     controls.maxDistance = 10000;
