@@ -90,8 +90,9 @@ export class Dungeon {
   }
 
   generateMonsters(prototypes) {
+    let monsterNumber = 5;
     let monsterPrototypes = prototypes.find(prototype => prototype.type === 'monster').prototypes;
-    for (let i = 0; i < 45; i++) {
+    for (let i = 0; i < monsterNumber; i++) {
       let monster = new Monster(monsterPrototypes[0], {
         dungeon: this.object
       }); // TODO: other way

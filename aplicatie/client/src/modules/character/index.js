@@ -5,12 +5,7 @@ export class Character {
     this.camera = camera;
     this.object = prototype.clone();
 
-    this.moveKey = {
-      up: false,
-      left: false,
-      down: false,
-      right: false
-    };
+    this.keyboard = {};
     this.collisionList = [];
 
     this.object.add(camera);
@@ -20,69 +15,12 @@ export class Character {
   }
 
   keyboardEvents() {
-    let fired = {
-      up: false,
-      left: false,
-      down: false,
-      right: false
-    };
-
     let onKeyDown = (event) => {
-      switch (event.keyCode) {
-        case 87: // w
-          if (!fired.up) {
-            fired.up = true;
-            this.moveKey.up = true;
-          }
-          break;
-        case 65: // a
-          if (!fired.left) {
-            fired.left = true;
-            this.moveKey.left = true;
-          }
-          break;
-        case 83: // s
-          if (!fired.down) {
-            fired.down = true;
-            this.moveKey.down = true;
-          }
-          break;
-        case 68: // d
-          if (!fired.right) {
-            fired.right = true;
-            this.moveKey.right = true;
-          }
-          break;
-      }
+      this.keyboard[event.code] = true;
     };
 
     let onKeyUp = (event) => {
-      switch (event.keyCode) {
-        case 87: // w
-          if (fired.up) {
-            fired.up = false;
-            this.moveKey.up = false;
-          }
-          break;
-        case 65: // a
-          if (fired.left) {
-            fired.left = false;
-            this.moveKey.left = false;
-          }
-          break;
-        case 83: // s
-          if (fired.down) {
-            fired.down = false;
-            this.moveKey.down = false;
-          }
-          break;
-        case 68: // d
-          if (fired.right) {
-            fired.right = false;
-            this.moveKey.right = false;
-          }
-          break;
-      }
+      this.keyboard[event.code] = false;
     };
 
     window.addEventListener('keydown', onKeyDown);
@@ -135,7 +73,7 @@ export class Character {
   }
 
   checkMoveDiagonally() {
-    return Object.values(this.moveKey).filter(
+    return Object.values(this.keyboard).filter(
       (direction) => { return direction === true;}
     ).length === 2 ? true : false;
   }
@@ -152,32 +90,34 @@ export class Character {
 
   move(backPeddle) {
     let moveSpeed = this.getMoveSpeed();
+    let rotateSpeed = Math.PI * 0.01;
 
     if (backPeddle) {
-      if (this.moveKey.up) {
-        this.object.position.x += moveSpeed;
+      if (this.keyboard.KeyA) { // a
+        this.object.rotation.y += rotateSpeed;
       }
-      if (this.moveKey.down) {
-        this.object.position.x -= moveSpeed;
+      if (this.keyboard.KeyD) { // d
+        this.object.rotation.y -= rotateSpeed;
       }
-      if (this.moveKey.left) {
-        this.object.position.z -= moveSpeed;
+      if (this.keyboard.KeyS) { // s
+        this.object.translateZ(-moveSpeed);
       }
-      if (this.moveKey.right) {
-        this.object.position.z += moveSpeed;
+      if (this.keyboard.KeyW) { // w
+        this.object.translateZ(moveSpeed);
       }
     } else {
-      if (this.moveKey.up) {
-        this.object.position.x -= moveSpeed;
+        console.log(this.keyboard);
+      if (this.keyboard.KeyA) { // a
+        this.object.rotation.y -= rotateSpeed;
       }
-      if (this.moveKey.down) {
-        this.object.position.x += moveSpeed;
+      if (this.keyboard.KeyD) { // d
+        this.object.rotation.y += rotateSpeed;
       }
-      if (this.moveKey.left) {
-        this.object.position.z += moveSpeed;
+      if (this.keyboard.KeyS) { // s
+        this.object.translateZ(moveSpeed);
       }
-      if (this.moveKey.right) {
-        this.object.position.z -= moveSpeed;
+      if (this.keyboard.KeyW) { // w
+        this.object.translateZ(-moveSpeed);
       }
     }
     this.checkCollision();
