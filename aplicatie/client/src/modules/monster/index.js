@@ -7,7 +7,7 @@ export class Monster {
     this.currentDirection = 'N';
     this.directionList = ['N', 'S', 'W', 'E'];
     this.collisionList = [];
-    this.moveSpeed = 1.5;
+    this.moveSpeed = 0.9;
     this.isWalking = true;
     this.setPosition(param.dungeon);
     this.setCollisionList(param.dungeon);

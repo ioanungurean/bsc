@@ -1,7 +1,7 @@
 import '../resources/texture/ground';
 import '../resources/texture/wall';
-import '../resources/texture/circle_a';
-import '../resources/texture/circle_b';
+import '../resources/texture/start';
+import '../resources/texture/finish';
 
 import { Mesh, PlaneBufferGeometry, BoxBufferGeometry, MeshBasicMaterial, TextureLoader, DoubleSide } from 'three';
 
@@ -29,7 +29,7 @@ export class TilePrototype {
         );
         prototype.name = key;
         if (key === 'wall') {
-          prototype.position.y = this.size;
+          prototype.position.y = this.size / 2;
         } else {
           prototype.rotation.x = Math.PI * 0.5;
         }
@@ -49,7 +49,7 @@ export class TilePrototype {
       case 'plane':
         return new PlaneBufferGeometry(size, size, 1, 1);
       case 'box':
-        return new BoxBufferGeometry(size, size * 2, size);
+        return new BoxBufferGeometry(size, size, size);
     }
   }
 
@@ -65,11 +65,11 @@ export class TilePrototype {
       geometry: 'box'
     },{
       name: 'spawn',
-      textureUrl: './resources/circle_a.png',
+      textureUrl: './resources/start.png',
       geometry: 'plane'
     },{
       name: 'exit',
-      textureUrl: './resources/circle_b.png',
+      textureUrl: './resources/finish.png',
       geometry: 'plane'
     }];
 

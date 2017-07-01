@@ -48,7 +48,7 @@ export class MonsterPrototype {
       return new Promise((resolve, reject) => {
         loader.load(asset.textureUrl, (response) => {
           this.map.assets.set(asset.name, {
-            geometry: new SphereBufferGeometry(9),
+            geometry: new SphereBufferGeometry(8),
             material: new MeshBasicMaterial({ side: DoubleSide, map: response })
           });
 

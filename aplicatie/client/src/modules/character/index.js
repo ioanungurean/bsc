@@ -8,6 +8,9 @@ export class Character {
     this.keyboard = {};
     this.collisionList = [];
 
+    this.moveSpeed = 0.9;
+    this.rotateSpeed = Math.PI * 0.01;
+
     this.object.add(camera);
     this.keyboardEvents();
     this.setPosition(param.dungeon);
@@ -16,10 +19,12 @@ export class Character {
 
   keyboardEvents() {
     let onKeyDown = (event) => {
+      event.preventDefault();
       this.keyboard[event.code] = true;
     };
 
     let onKeyUp = (event) => {
+      event.preventDefault();
       this.keyboard[event.code] = false;
     };
 
@@ -43,6 +48,7 @@ export class Character {
     this.object.position.y = 10;
     this.object.position.x = start.x;
     this.object.position.z = start.z;
+    this.object.rotation.y = Math.PI / 2;
   }
 
   setCollisionList(dungeon) {
@@ -72,52 +78,32 @@ export class Character {
     });
   }
 
-  checkMoveDiagonally() {
-    return Object.values(this.keyboard).filter(
-      (direction) => { return direction === true;}
-    ).length === 2 ? true : false;
-  }
-
-  getMoveSpeed() {
-    let moveSpeed = 1.5;
-
-    if (this.checkMoveDiagonally()) {
-      return moveSpeed * 1 / Math.sqrt(2);
-    }
-
-    return moveSpeed;
-  }
-
   move(backPeddle) {
-    let moveSpeed = this.getMoveSpeed();
-    let rotateSpeed = Math.PI * 0.01;
-
     if (backPeddle) {
       if (this.keyboard.KeyA) { // a
-        this.object.rotation.y += rotateSpeed;
+        this.object.rotation.y += this.rotateSpeed;
       }
       if (this.keyboard.KeyD) { // d
-        this.object.rotation.y -= rotateSpeed;
+        this.object.rotation.y -= this.rotateSpeed;
       }
       if (this.keyboard.KeyS) { // s
-        this.object.translateZ(-moveSpeed);
+        this.object.translateZ(-this.moveSpeed);
       }
       if (this.keyboard.KeyW) { // w
-        this.object.translateZ(moveSpeed);
+        this.object.translateZ(this.moveSpeed);
       }
     } else {
-        console.log(this.keyboard);
       if (this.keyboard.KeyA) { // a
-        this.object.rotation.y -= rotateSpeed;
+        this.object.rotation.y -= this.rotateSpeed;
       }
       if (this.keyboard.KeyD) { // d
-        this.object.rotation.y += rotateSpeed;
+        this.object.rotation.y += this.rotateSpeed;
       }
       if (this.keyboard.KeyS) { // s
-        this.object.translateZ(moveSpeed);
+        this.object.translateZ(this.moveSpeed);
       }
       if (this.keyboard.KeyW) { // w
-        this.object.translateZ(-moveSpeed);
+        this.object.translateZ(-this.moveSpeed);
       }
     }
     this.checkCollision();

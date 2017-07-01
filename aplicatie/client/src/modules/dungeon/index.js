@@ -27,8 +27,8 @@ export class Dungeon {
 
   generate() {
     return this.load().then((objects) => {
-      DEVELOPMENT && this.generateGrid();
-      DEVELOPMENT && this.generateAxis();
+      // DEVELOPMENT && this.generateGrid();
+      // DEVELOPMENT && this.generateAxis();
       this.generateTiles(objects);
       this.generateMonsters(objects);
       this.generateCharacter(objects);
@@ -56,7 +56,6 @@ export class Dungeon {
         wireframe: true
       })
     );
-    grid.rotation.x = Math.PI * 0.5;
 
     this.object.add(grid);
   }
