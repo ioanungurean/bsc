@@ -1,4 +1,4 @@
-import { Scene } from 'three';
+import { Scene, Fog } from 'three';
 
 import { AppCamera } from './core/camera';
 import { AppRenderer } from './core/renderer';
@@ -10,7 +10,10 @@ let OrbitControls = require('three-orbitcontrols');
 export class App {
   constructor() {
     this.scene = new Scene();
-    this.renderer = new AppRenderer();
+
+    this.scene.fog = new Fog(0xcce0ff, 100, 300);
+    this.renderer = new AppRenderer(this.scene.fog.color);
+
     this.camera = new AppCamera();
 
     this.modules = []; // children modules i.e dungeon

@@ -1,12 +1,12 @@
 import { WebGLRenderer } from 'three';
 
 export class AppRenderer extends WebGLRenderer {
-  constructor() {
+  constructor(fogColor) {
     super({
       antialias: true,
       canvas: document.querySelector('#app')
     });
-    this.setClearColor(0xCCCCCC);
+    this.setClearColor(fogColor);
     this.setSize(window.innerWidth, window.innerHeight);
 
     window.addEventListener('resize', () => {

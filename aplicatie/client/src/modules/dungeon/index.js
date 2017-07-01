@@ -10,9 +10,9 @@ import { DungeonGenerator } from './generator/generator';
 export class Dungeon {
   constructor(camera) {
     this.dataModel = {
-      segmentCount: 80,
+      segmentCount: 20,
       segmentSize: 20,
-      totalSize: 80 * 20
+      totalSize: 20 * 20
     };
     this.camera = camera;
     this.object = new Object3D();

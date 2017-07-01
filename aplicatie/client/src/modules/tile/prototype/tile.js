@@ -29,7 +29,7 @@ export class TilePrototype {
         );
         prototype.name = key;
         if (key === 'wall') {
-          prototype.position.y = this.size / 2;
+          prototype.position.y = this.size;
         } else {
           prototype.rotation.x = Math.PI * 0.5;
         }
@@ -49,7 +49,7 @@ export class TilePrototype {
       case 'plane':
         return new PlaneBufferGeometry(size, size, 1, 1);
       case 'box':
-        return new BoxBufferGeometry(size, size, size);
+        return new BoxBufferGeometry(size, size * 2, size);
     }
   }
 
@@ -77,7 +77,7 @@ export class TilePrototype {
       return new Promise((resolve, reject) => {
         loader.load(asset.textureUrl, (response) => {
           this.map.assets.set(asset.name, {
-            geometry: this.resolveGeometry(asset.geometry, 20),
+            geometry: this.resolveGeometry(asset.geometry, this.size),
             material: new MeshBasicMaterial({ side: DoubleSide, map: response})
           });
 
