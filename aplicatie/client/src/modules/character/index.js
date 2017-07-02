@@ -39,7 +39,7 @@ export class Character {
     let start = {};
 
     dungeon.children.forEach((children) => {
-      if (children.name === 'spawn') {
+      if (children.name === 'start') {
         start.x = children.position.x;
         start.z = children.position.z;
       }

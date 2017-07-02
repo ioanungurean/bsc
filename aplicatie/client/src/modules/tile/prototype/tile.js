@@ -64,11 +64,11 @@ export class TilePrototype {
       textureUrl: './resources/wall.png',
       geometry: 'box'
     },{
-      name: 'spawn',
+      name: 'start',
       textureUrl: './resources/start.png',
       geometry: 'plane'
     },{
-      name: 'exit',
+      name: 'finish',
       textureUrl: './resources/finish.png',
       geometry: 'plane'
     }];

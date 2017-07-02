@@ -116,14 +116,14 @@ export class DungeonGenerator {
   }
 
   /**
-   * @description Place destination & starting spawn points
+   * @description Place starting & destination points
    */
   static generateSpectrumPoints(size, layout) {
     layout[size - 1][10] = {
-      type: 'spawn'
+      type: 'start'
     };
     layout[0][DungeonGenerator.generateRandomNumber(1, size - 1)] = {
-      type: 'exit'
+      type: 'finish'
     };
   }
 }

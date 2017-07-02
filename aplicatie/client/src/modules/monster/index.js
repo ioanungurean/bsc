@@ -44,8 +44,8 @@ export class Monster {
       console.warn('Set Collision List - No children for dungeon'); return;
     }
 
-    let unavailableTiles = ['wall', 'exit', 'spawn'];
-    // BUG: some monsters fly off the map at spawn point :)
+    let unavailableTiles = ['wall', 'start', 'finish'];
+    // BUG: some monsters fly off the map at start point :)
     dungeon.children.forEach((children) => {
       if (unavailableTiles.indexOf(children.name) !== -1) {
         let boundingBox = new Box3().setFromObject(children);
