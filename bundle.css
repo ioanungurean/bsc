@@ -1,0 +1,1393 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+input:focus {
+  outline: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: 0;
+}
+
+button,
+input[type='button'] {
+  cursor: pointer;
+}
+
+/**
+ * Mixin for Responsiveness
+ */
+
+/**
+ * Flexbox Container
+ */
+
+/**
+ * Mixin for flex grouping
+ */
+
+/**
+ * Variables & Settings
+ */
+
+/**
+ * TODO://
+ */
+
+.column__1__1 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__2 {
+  width: 50%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__3 {
+  width: 33%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__4 {
+  width: 25%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__5 {
+  width: 20%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__6 {
+  width: 17%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__7 {
+  width: 14%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__8 {
+  width: 13%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__9 {
+  width: 11%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__10 {
+  width: 10%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__11 {
+  width: 9%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__1__12 {
+  width: 8%;
+  display: flex;
+}
+
+.\+hasscroll.column__1__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__1 {
+  width: 200%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__2 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__3 {
+  width: 67%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__4 {
+  width: 50%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__5 {
+  width: 40%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__6 {
+  width: 33%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__7 {
+  width: 29%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__8 {
+  width: 25%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__9 {
+  width: 22%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__10 {
+  width: 20%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__11 {
+  width: 18%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__2__12 {
+  width: 17%;
+  display: flex;
+}
+
+.\+hasscroll.column__2__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__1 {
+  width: 300%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__2 {
+  width: 150%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__3 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__4 {
+  width: 75%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__5 {
+  width: 60%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__6 {
+  width: 50%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__7 {
+  width: 43%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__8 {
+  width: 38%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__9 {
+  width: 33%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__10 {
+  width: 30%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__11 {
+  width: 27%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__3__12 {
+  width: 25%;
+  display: flex;
+}
+
+.\+hasscroll.column__3__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__1 {
+  width: 400%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__2 {
+  width: 200%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__3 {
+  width: 133%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__4 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__5 {
+  width: 80%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__6 {
+  width: 67%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__7 {
+  width: 57%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__8 {
+  width: 50%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__9 {
+  width: 44%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__10 {
+  width: 40%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__11 {
+  width: 36%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__4__12 {
+  width: 33%;
+  display: flex;
+}
+
+.\+hasscroll.column__4__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__1 {
+  width: 500%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__2 {
+  width: 250%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__3 {
+  width: 167%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__4 {
+  width: 125%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__5 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__6 {
+  width: 83%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__7 {
+  width: 71%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__8 {
+  width: 63%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__9 {
+  width: 56%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__10 {
+  width: 50%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__11 {
+  width: 45%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__5__12 {
+  width: 42%;
+  display: flex;
+}
+
+.\+hasscroll.column__5__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__1 {
+  width: 600%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__2 {
+  width: 300%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__3 {
+  width: 200%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__4 {
+  width: 150%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__5 {
+  width: 120%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__6 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__7 {
+  width: 86%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__8 {
+  width: 75%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__9 {
+  width: 67%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__10 {
+  width: 60%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__11 {
+  width: 55%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__6__12 {
+  width: 50%;
+  display: flex;
+}
+
+.\+hasscroll.column__6__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__1 {
+  width: 700%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__2 {
+  width: 350%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__3 {
+  width: 233%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__4 {
+  width: 175%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__5 {
+  width: 140%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__6 {
+  width: 117%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__7 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__8 {
+  width: 88%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__9 {
+  width: 78%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__10 {
+  width: 70%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__11 {
+  width: 64%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__7__12 {
+  width: 58%;
+  display: flex;
+}
+
+.\+hasscroll.column__7__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__1 {
+  width: 800%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__2 {
+  width: 400%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__3 {
+  width: 267%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__4 {
+  width: 200%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__5 {
+  width: 160%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__6 {
+  width: 133%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__7 {
+  width: 114%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__8 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__9 {
+  width: 89%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__10 {
+  width: 80%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__11 {
+  width: 73%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__8__12 {
+  width: 67%;
+  display: flex;
+}
+
+.\+hasscroll.column__8__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__1 {
+  width: 900%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__2 {
+  width: 450%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__3 {
+  width: 300%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__4 {
+  width: 225%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__5 {
+  width: 180%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__6 {
+  width: 150%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__7 {
+  width: 129%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__8 {
+  width: 113%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__9 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__10 {
+  width: 90%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__11 {
+  width: 82%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__9__12 {
+  width: 75%;
+  display: flex;
+}
+
+.\+hasscroll.column__9__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__1 {
+  width: 1000%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__2 {
+  width: 500%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__3 {
+  width: 333%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__4 {
+  width: 250%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__5 {
+  width: 200%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__6 {
+  width: 167%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__7 {
+  width: 143%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__8 {
+  width: 125%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__9 {
+  width: 111%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__10 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__11 {
+  width: 91%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__10__12 {
+  width: 83%;
+  display: flex;
+}
+
+.\+hasscroll.column__10__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__1 {
+  width: 1100%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__1 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__2 {
+  width: 550%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__2 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__3 {
+  width: 367%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__3 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__4 {
+  width: 275%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__4 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__5 {
+  width: 220%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__5 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__6 {
+  width: 183%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__6 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__7 {
+  width: 157%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__7 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__8 {
+  width: 138%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__8 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__9 {
+  width: 122%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__9 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__10 {
+  width: 110%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__10 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__11 {
+  width: 100%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__11 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.column__11__12 {
+  width: 92%;
+  display: flex;
+}
+
+.\+hasscroll.column__11__12 {
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.row {
+  width: 1200px;
+  margin: 0 auto;
+}
