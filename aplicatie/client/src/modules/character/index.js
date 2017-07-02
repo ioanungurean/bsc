@@ -80,29 +80,29 @@ export class Character {
 
   move(backPeddle) {
     if (backPeddle) {
-      if (this.keyboard.KeyA) { // a
-        this.object.rotation.y += this.rotateSpeed;
-      }
-      if (this.keyboard.KeyD) { // d
+      if (this.keyboard.KeyA) {
         this.object.rotation.y -= this.rotateSpeed;
       }
-      if (this.keyboard.KeyS) { // s
+      if (this.keyboard.KeyD) {
+        this.object.rotation.y += this.rotateSpeed;
+      }
+      if (this.keyboard.KeyS) {
         this.object.translateZ(-this.moveSpeed);
       }
-      if (this.keyboard.KeyW) { // w
+      if (this.keyboard.KeyW) {
         this.object.translateZ(this.moveSpeed);
       }
     } else {
-      if (this.keyboard.KeyA) { // a
-        this.object.rotation.y -= this.rotateSpeed;
-      }
-      if (this.keyboard.KeyD) { // d
+      if (this.keyboard.KeyA) {
         this.object.rotation.y += this.rotateSpeed;
       }
-      if (this.keyboard.KeyS) { // s
+      if (this.keyboard.KeyD) {
+        this.object.rotation.y -= this.rotateSpeed;
+      }
+      if (this.keyboard.KeyS) {
         this.object.translateZ(this.moveSpeed);
       }
-      if (this.keyboard.KeyW) { // w
+      if (this.keyboard.KeyW) {
         this.object.translateZ(-this.moveSpeed);
       }
     }
