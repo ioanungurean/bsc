@@ -1,9 +1,11 @@
 import { Box3 } from 'three';
+import { socket } from 'socket';
 
 export class Character {
   constructor(prototype, param, camera) {
     this.camera = camera;
     this.object = prototype.clone();
+    this.player = prototype.clone();
 
     this.keyboard = {};
     this.collisionList = [];
@@ -12,6 +14,8 @@ export class Character {
     this.rotateSpeed = Math.PI * 0.01;
 
     this.object.add(camera);
+
+    this.socketEvents();
     this.keyboardEvents();
     this.setPosition(param.dungeon);
     this.setCollisionList(param.dungeon);
@@ -32,6 +36,20 @@ export class Character {
     window.addEventListener('keyup', onKeyUp);
   }
 
+  socketEvents() {
+    setInterval(() => {
+      socket.emit('movement',
+      { position: this.object.position, rotation: this.object.rotation});
+    }, 1000 / 30);
+
+    socket.on('state', (coords) => {
+        this.player.position.x = coords.position.x;
+        this.player.position.y = coords.position.y;
+        this.player.position.z = coords.position.z;
+        this.player.rotation.y = coords.rotation._y;
+    });
+  }
+
   setPosition(dungeon) {
     if (!dungeon.children) {
       return;
@@ -49,6 +67,11 @@ export class Character {
     this.object.position.x = start.x;
     this.object.position.z = start.z;
     this.object.rotation.y = Math.PI / 2;
+
+    this.player.position.y = 10;
+    this.player.position.x = start.x;
+    this.player.position.z = start.z;
+    this.player.rotation.y = Math.PI / 2;
   }
 
   setCollisionList(dungeon) {

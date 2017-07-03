@@ -6,6 +6,7 @@ import { Monster } from 'monster';
 import { CharacterPrototype } from 'characterPrototype';
 import { Character } from 'character';
 import { DungeonGenerator } from './generator/generator';
+import layout from './generator/layout';
 
 export class Dungeon {
   constructor(camera) {
@@ -70,7 +71,7 @@ export class Dungeon {
 
   generateTiles(prototypes) {
     let tilePrototypes = prototypes.find(prototype => prototype.type === 'tile').prototypes;
-    let layout = DungeonGenerator.generateLayout(this.dataModel.segmentCount);
+    // let layout = DungeonGenerator.generateLayout(this.dataModel.segmentCount);
 
     for (let i = 0; i < layout.length; i++) {
       for (let j = 0; j < layout[i].length; j++) {
@@ -107,6 +108,7 @@ export class Dungeon {
     }, this.camera);
     this.modules.push(character);
     this.object.add(character.object);
+    this.object.add(character.player);
   }
 
   update() {

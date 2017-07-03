@@ -9,10 +9,11 @@ let io = require('socket.io')(server);
 
 server.listen(3000);
 
-// handle socket events
 let players = {};
+
+// handle socket events
 io.sockets.on('connection', (socket) => {
-  console.log('user connected');
+  console.log('ws: player connected');
 
   socket.on('new player', (username) => {
     players[socket.id] = {
@@ -20,8 +21,14 @@ io.sockets.on('connection', (socket) => {
     };
     console.log(players);
   });
+  socket.on('movement', (coords) => {
+    socket.broadcast.emit('state', coords);
+  });
 
   socket.on('disconnect', () => {
-    console.log('user disconnected');
+    console.log('ws: player disconnected');
+    socket.emit('delete player', socket.id);
+
+    delete players[socket.id];
   });
 });
