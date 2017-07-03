@@ -63,12 +63,10 @@ export class Character {
       }
     });
 
-    this.object.position.y = 10;
     this.object.position.x = start.x;
     this.object.position.z = start.z;
     this.object.rotation.y = Math.PI / 2;
 
-    this.player.position.y = 10;
     this.player.position.x = start.x;
     this.player.position.z = start.z;
     this.player.rotation.y = Math.PI / 2;

@@ -11,7 +11,7 @@ export class App {
   constructor() {
     this.scene = new Scene();
 
-    this.scene.fog = new Fog(0xcce0ff, 100, 300);
+    this.scene.fog = new Fog(0xcce0ff, 15, 70);
     this.renderer = new AppRenderer(this.scene.fog.color);
 
     this.camera = new AppCamera();
