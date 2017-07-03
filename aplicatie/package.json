@@ -15,6 +15,7 @@
   "author": "Ioan Ungurean",
   "license": "MIT",
   "dependencies": {
+    "socket.io-client": "^2.0.3",
     "three": "^0.85.2",
     "three-orbitcontrols": "^1.2.0",
     "xbem": "0.0.6"

@@ -1,0 +1,53 @@
+@import 'xbem';
+@import 'webc/login';
+
+@include block(login) {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: map-get($webc-login, background-color);
+
+  @include element(content) {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    border: 1px solid  map-get($webc-login, border-color);
+  }
+
+  @include element(wrapper) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  @include element(input) {
+    line-height: 1.75;
+    min-width: 300px;
+    padding-left: 20px;
+    border: 0;
+    border-bottom: 1px solid map-get($webc-login, border-color);
+    background: transparent;
+    color: map-get($webc-login, input-color);
+  }
+
+  @include element(label) {
+    margin-bottom: 10px;
+    color: map-get($webc-login, label-color);
+  }
+
+  @include element(button) {
+    font-size: map-get($sizes, font-title);
+    height: map-get($webc-login, button-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: map-get($webc-login, button-background);
+    color: map-get($webc-login, button-color);
+    border: 1px solid map-get($webc-login, button-border);
+
+    &:hover {
+      outline: map-get($webc-login, button-border) auto 5px;
+    }
+  }
+}

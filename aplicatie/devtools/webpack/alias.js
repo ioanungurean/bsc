@@ -27,7 +27,7 @@ class AliasProvider {
 
   static get webc() {
     return {
-
+      login: path.resolve('client/src/webc/login')
     };
   }
 }

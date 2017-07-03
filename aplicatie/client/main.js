@@ -1,5 +1,5 @@
 import 'layout';
-import { App } from 'app';
+import { Login } from 'login';
 /**
  * Bootstrap the App
  */
@@ -10,6 +10,5 @@ import { App } from 'app';
     document.addEventListener('DOMContentLoaded', callback);
   }
 })(() => {
-  let app = new App();
-  app.run();
+  Login.init();
 });

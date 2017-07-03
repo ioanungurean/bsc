@@ -1,0 +1,12 @@
+@import 'patterns';
+
+$webc-login: (
+  label-color: map-get($colors, project-grey-light),
+  input-color:  map-get($colors, project-grey-light),
+  border-color: map-get($colors, project-grey-light),
+  background-color: map-get($colors, project-grey),
+  button-height: map-get($sizes, btn-height),
+  button-background: map-get($colors, project-grey),
+  button-color: map-get($colors, project-blue),
+  button-border: map-get($colors, project-blue),
+);
