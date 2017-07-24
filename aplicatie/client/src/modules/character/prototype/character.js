@@ -1,4 +1,7 @@
-import { Mesh, BoxBufferGeometry, MeshBasicMaterial } from 'three';
+import { ObjectLoader } from 'three';
+
+import '../resources/rabbit.json';
+import '../resources/rabbit.png';
 
 export class CharacterPrototype {
   constructor() {
@@ -13,12 +16,9 @@ export class CharacterPrototype {
 
   generate() {
     return this.load().then((resources) => {
-      let boxCharacter = new Mesh(
-        new BoxBufferGeometry(5, 10, 5),
-        new MeshBasicMaterial({ color: 0xfff222 })
-      );
-      boxCharacter.name = 'box';
-      this.prototypes.push(boxCharacter);
+      resources.scale.set(5, 5, 5);
+      resources.name = 'rabbit';
+      this.prototypes.push(resources);
 
       return {
         type: 'character',
@@ -28,7 +28,11 @@ export class CharacterPrototype {
   }
 
   load() {
-    let promises = [];
-    return Promise.all(promises);
+    let loader = new ObjectLoader();
+    return new Promise ((resolve, reject) => {
+      loader.load('./resources/rabbit.json', (resources) => {
+        resolve(resources);
+      });
+    });
   }
 }

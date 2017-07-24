@@ -3,7 +3,8 @@ const path = require('path');
 class AliasProvider {
   static get bootstrap() {
     return {
-      app: path.resolve('client/src/bootstrap/app')
+      app: path.resolve('client/src/bootstrap/app'),
+      socket: path.resolve('client/src/bootstrap/app/core/socket.js')
     };
   }
 
